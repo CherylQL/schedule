@@ -4,33 +4,21 @@
 
 ```typescript
 export default class Schedule:{
-
+    
     // 班次id
-    _id:string;
+    id:string;
 
-    // 创建者id
+    //创建者id
     ownerID:string;
 
-    // 班表标题
+    //班表标题
     title:string;
 
-    // 班表描述
+    //班表描述
     description:string;
 
-    // 活动开始时间
-    startact: Date;
-
-    // 活动结束时间
-    endact: Date;
-
-    // 参与者所需标识
+    //参与者所需标识
     tag: string;
-
-    // 参加者 id 列表
-    attenders: Array<string>;
-
-    // 班次 id 列表
-    bancis: Array<string>;
 }
 ```
 
@@ -40,7 +28,7 @@ export default class Schedule:{
 export default class Banci:{
 
     // 班次 id
-    _id: string;
+    id: string;
 
     // 对应班表
     scheid: string;
@@ -69,7 +57,7 @@ export default class User:{
 
     // 性别
     gender: number;
-
+    
     // 名称
     name: string;
 }
@@ -117,7 +105,6 @@ export default class info:{
 9. 编辑更新班表：editsche(scheid)
 
 ### 查看信息
-
 获取班表信息：getscheinfo(scheid)
 获取班次信息：getclassinfo(scheid,classid)
 获取用户信息：getuserinfo(scheid,userid)
@@ -126,7 +113,6 @@ export default class info:{
 ## 核心功能
 
 ### 自动排班：
-
 班次 id 与 user:tendency 中数值的对应，并受限于 class:count
 逻辑流程：？
 排班的类型预设

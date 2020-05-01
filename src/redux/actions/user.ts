@@ -10,6 +10,6 @@ interface setUserData {
 export type UserActions = setUserData;
 
 /** 将新的 User 存入 Redux （或是覆写原有的 User) */
-export function setUserData(user: User): setUserData {
+export function setUserData(user: User) {
     return { type: SET_USER_DATA, data: user };
 }
